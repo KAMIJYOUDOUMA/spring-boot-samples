@@ -6,14 +6,12 @@
 		<!-- Your own application should inherit from spring-boot-starter-parent -->
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-samples</artifactId>
-		<version>${revision}</version>
+		<version>${sample.version}</version>
 	</parent>
 	<artifactId>spring-boot-sample-property-validation</artifactId>
 	<name>Spring Boot Property Validation Sample</name>
 	<description>Spring Boot Property Validation Sample</description>
-	<properties>
-		<main.basedir>${basedir}/../..</main.basedir>
-	</properties>
+
 	<dependencies>
 		<!-- Compile -->
 		<dependency>

@@ -11,12 +11,12 @@
 		actual jars). Run with '$ java -jar target/*.jar'.
 	</description>
 
-	<property name="ant-spring-boot.version" value="${revision}" />
+	<property name="ant-spring-boot.version" value="${sample.version}" />
 	<property name="lib.dir" location="${basedir}/target/lib" />
 	<property name="start-class" value="sample.ant.SampleAntApplication" />
 
 	<target name="resolve" description="--> retrieve dependencies with ivy">
-		<ivy:retrieve pattern="${lib.dir}/[conf]/[artifact]-[type]-[revision].[ext]" />
+		<ivy:retrieve pattern="${lib.dir}/[conf]/[artifact]-[type]-[sample.version].[ext]" />
 	</target>
 
 	<target name="classpaths" depends="resolve">

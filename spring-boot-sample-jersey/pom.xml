@@ -6,15 +6,13 @@
 		<!-- Your own application should inherit from spring-boot-starter-parent -->
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-samples</artifactId>
-		<version>${revision}</version>
+		<version>${sample.version}</version>
 	</parent>
 	<artifactId>spring-boot-sample-jersey</artifactId>
 	<packaging>war</packaging>
 	<name>Spring Boot Jersey Sample</name>
 	<description>Spring Boot Jersey Sample</description>
-	<properties>
-		<main.basedir>${basedir}/../..</main.basedir>
-	</properties>
+
 	<dependencies>
 		<!-- Compile -->
 		<dependency>
