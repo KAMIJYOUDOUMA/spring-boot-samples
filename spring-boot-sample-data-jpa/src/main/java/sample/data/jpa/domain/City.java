@@ -49,9 +49,8 @@ public class City implements Serializable {
 	protected City() {
 	}
 
-	public City(String name, String country) {
+	public City(String name) {
 		this.name = name;
-		this.country = country;
 	}
 
 	public String getName() {
