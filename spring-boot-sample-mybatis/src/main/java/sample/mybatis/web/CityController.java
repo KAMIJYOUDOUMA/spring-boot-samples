@@ -14,32 +14,29 @@
  * limitations under the License.
  */
 
-package sample.jpa.web;
+package sample.mybatis.web;
+
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+import sample.mybatis.dao.CityMapper;
+import sample.mybatis.entity.City;
 
 import java.util.List;
 
-import sample.jpa.domain.Note;
-import sample.jpa.repository.NoteRepository;
+@RestController
+public class CityController {
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.servlet.ModelAndView;
+    @Autowired
+    private CityMapper cityMapper;
 
-@Controller
-public class IndexController {
-
-	@Autowired
-	private NoteRepository noteRepository;
-
-	@GetMapping("/")
-	@Transactional(readOnly = true)
-	public ModelAndView index() {
-		List<Note> notes = this.noteRepository.findAll();
-		ModelAndView modelAndView = new ModelAndView("index");
-		modelAndView.addObject("notes", notes);
-		return modelAndView;
-	}
+    @GetMapping("/")
+    public List<City> index() {
+        PageHelper.startPage(0, 3);
+        List<City> cities = this.cityMapper.selectAll();
+        return cities;
+    }
 
 }
