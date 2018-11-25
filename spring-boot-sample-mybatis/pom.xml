@@ -9,8 +9,8 @@
         <version>${sample.version}</version>
     </parent>
     <artifactId>spring-boot-sample-mybatis</artifactId>
-    <name>Spring Boot JPA Sample</name>
-    <description>Spring Boot JPA Sample</description>
+    <name>Spring Boot MyBatis Sample</name>
+    <description>Spring Boot MyBatis Sample</description>
 
     <dependencies>
         <!-- Compile -->
